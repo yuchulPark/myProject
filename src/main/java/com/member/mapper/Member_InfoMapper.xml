@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member_info">
+	<!-- 회원가입 -->
+  <insert id="insert">
+  	insert into member_info(member_no, member_id, member_pwd, member_email, member_name, member_info_open, member_regidate, member_birth, member_gender, member_nickname, member_introduce, member_img) values(
+        seq_member_no.nextval, #{member_id}, #{member_pwd}, #{member_email}, #{member_name}, #{member_info_open}, sysdate, #{member_birth}, #{member_gender}, #{member_nickname}, #{member_introduce}, #{member_img})
+  </insert>
+  
+  
+</mapper>
